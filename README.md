@@ -7,6 +7,9 @@
 - Make sure you also have pip installed.
 - Please execute the ```init.sh``` script
 
+
+### Want to start? just run ```mate.py```
+
 ### What Mate can do (Phase #1)?
 - Entertain you with some time killing fun
 - Help you with some system information
