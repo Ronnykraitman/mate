@@ -36,15 +36,6 @@ def get_top_memory_use():
     run_bash_command(f"top -o rsize")
 
 
-def kill_process():
-    port_to_kill = input("Port number you want to get rid off: ")
-    run_bash_command(f"kill -TERM {port_to_kill}")
-
-
-def mac_uptime():
-    run_bash_command("uptime")
-
-
 def time_to_leave():
     print("Set an alarm to tell you its time to stop using te terminal and get a rest\n")
     ttl = input("When should I alert you? (format: 1245): ")

@@ -35,7 +35,12 @@ def show_menu(options: list, menu_title: str):
 def welcome():
     name, error = get_response_from_bash_command("whoami")
     print(f"\nHey {name.title()}I'm Mate, your personal assistant\n")
-    run_bash_command("say Hey ronny, I am mate, your personal assistant")
+    w1: str = f"say Hey {name.title()}"
+    process = subprocess.Popen(w1, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    process.communicate()
+    w2: str = "say I am mate, your personal assistant"
+    process = subprocess.Popen(w2, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    process.communicate()
     print("How can I help you?\n")
     run_bash_command("say How can I help you")
 

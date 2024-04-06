@@ -1,6 +1,6 @@
 from utils import goodbye, show_menu
 from system.functions import get_wifi_password, get_ip_address, get_command_info, get_traceroute, dig_website, \
-    get_top_cpu_use, get_top_memory_use, mac_uptime, kill_process, time_to_leave
+    get_top_cpu_use, get_top_memory_use, time_to_leave
 
 sys_mate_options = [
     ("Display any historical wifi network password", get_wifi_password),
@@ -10,8 +10,6 @@ sys_mate_options = [
     ("Dig deeper into any website dns", dig_website),
     ("See processes by CPU usage", get_top_cpu_use),
     ("See processes by Memory usages", get_top_memory_use),
-    ("How much time your mac is awake?", mac_uptime),
-    ("Kill and slaughter any process", kill_process),
     ("Set alarm to let you know when it time to leave the terminal", time_to_leave),
     ("Main Menu", ()),
     ("Exit", goodbye)
