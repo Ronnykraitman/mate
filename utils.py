@@ -1,5 +1,4 @@
 import subprocess
-
 from simple_term_menu import TerminalMenu
 
 
@@ -35,12 +34,8 @@ def show_menu(options: list, menu_title: str):
 def welcome():
     name, error = get_response_from_bash_command("whoami")
     print(f"\nHey {name.title()}I'm Mate, your personal assistant\n")
-    w1: str = f"say Hey {name.title()}"
-    process = subprocess.Popen(w1, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
-    process.communicate()
-    w2: str = "say I am mate, your personal assistant"
-    process = subprocess.Popen(w2, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
-    process.communicate()
+    run_bash_command(f"say Hey {name.title()}")
+    run_bash_command("say I am mate, your personal assistant")
     print("How can I help you?\n")
     run_bash_command("say How can I help you")
 
